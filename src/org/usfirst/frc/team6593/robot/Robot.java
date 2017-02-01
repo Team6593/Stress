@@ -2,8 +2,10 @@
 package org.usfirst.frc.team6593.robot;
 
 import org.usfirst.frc.team6593.robot.commands.Climbing;
+import org.usfirst.frc.team6593.robot.commands.Shooting;
 import org.usfirst.frc.team6593.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team6593.robot.subsystems.MotorRope;
+import org.usfirst.frc.team6593.robot.subsystems.ShootOut;
 
 import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.IterativeRobot;
@@ -26,7 +28,8 @@ public class Robot extends IterativeRobot {
 	public static final DriveTrain drivetrain = new DriveTrain();
 	public static final MotorRope motorRope = new MotorRope();
 	public static final Climbing climbing = new Climbing();
-
+	public static final ShootOut shootOut = new ShootOut();
+	public static final Shooting shooting = new Shooting();
 	
 	public static OI oi;
 
