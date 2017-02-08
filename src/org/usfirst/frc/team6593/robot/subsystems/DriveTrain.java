@@ -40,7 +40,12 @@ public class DriveTrain extends Subsystem {
 //    }
 	
 	public void stop(){
+
 		robotdrive.drive(0,0);
+	}
+	
+	public void AutoDriveForward(){
+		
 	}
 	
 	
