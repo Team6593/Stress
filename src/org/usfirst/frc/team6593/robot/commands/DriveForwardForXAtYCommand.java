@@ -12,11 +12,18 @@ public class DriveForwardForXAtYCommand extends Command {
     protected double time;
     protected double endTime;
 
-    public void DriveStraightForDistance(double power, double timeInMillis) {
-        this.power = power;
+    public DriveForwardForXAtYCommand(double power, double timeInMillis) {
+		// TODO Auto-generated constructor stub
+    	this.power = power;
         this.time = timeInMillis;
         requires(Robot.drivetrain);
-    }
+	}
+
+//	public void DriveStraightForDistance(double power, double timeInMillis) {
+//        this.power = power;
+//        this.time = timeInMillis;
+//        requires(Robot.drivetrain);
+//    }
 
     // Called just before this Command runs the first time
     protected void initialize() {

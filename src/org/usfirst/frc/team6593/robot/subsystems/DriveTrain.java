@@ -44,9 +44,11 @@ public class DriveTrain extends Subsystem {
 		robotdrive.drive(0,0);
 	}
 	
-	public void AutoDriveForward(){
-		
+	public void DriveTrainSetSpeed(double speed1, double speed2){
+		robotdrive.drive(-speed1, -speed2);
 	}
+	
+	
 	
 	
     public void initDefaultCommand() {

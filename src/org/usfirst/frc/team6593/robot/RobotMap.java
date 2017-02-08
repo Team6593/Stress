@@ -19,7 +19,7 @@ public class RobotMap {
 	
 	public static final int Solenoidport = 0;
 	public static final int gyroSensor = 0;
-	public static final int ultrasonicSensor = 0;
+	
 
 	public static int	rightMotor = 0, 
 					    leftMotor = 1,

@@ -4,6 +4,7 @@ package org.usfirst.frc.team6593.robot;
 import org.usfirst.frc.team6593.robot.commands.Climbing;
 import org.usfirst.frc.team6593.robot.commands.DriveForwardForXAtYCommand;
 import org.usfirst.frc.team6593.robot.commands.Shooting;
+import org.usfirst.frc.team6593.robot.commands.Auto.Autoforward;
 import org.usfirst.frc.team6593.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team6593.robot.subsystems.MotorRope;
 import org.usfirst.frc.team6593.robot.subsystems.ShootOut;
@@ -25,13 +26,19 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  * directory.
  */
 public class Robot extends IterativeRobot {
-
+	
+	// Subsystem
 	public static final DriveTrain drivetrain = new DriveTrain();
 	public static final MotorRope motorRope = new MotorRope();
-	public static final Climbing climbing = new Climbing();
 	public static final ShootOut shootOut = new ShootOut();
+	
+	
+	//Command
+	public static final Climbing climbing = new Climbing();
 	public static final Shooting shooting = new Shooting();
-	public static final DriveForwardForXAtYCommand driveforwardforXAtYCommand = new DriveForwardForXAtYCommand();
+	//public static final DriveForwardForXAtYCommand driveforwardforXAtYCommand = new DriveForwardForXAtYCommand();
+	public static final Autoforward autoforward = new Autoforward();
+	
 	
 	
 	public static OI oi;
@@ -52,6 +59,7 @@ public class Robot extends IterativeRobot {
 		
 		CameraServer.getInstance().startAutomaticCapture();
 		
+		autonomousCommand = new Autoforward();
 		
 		
 	}
@@ -96,6 +104,8 @@ public class Robot extends IterativeRobot {
 		// schedule the autonomous command (example)
 		if (autonomousCommand != null)
 			autonomousCommand.start();
+		
+		
 	}
 
 	/**
