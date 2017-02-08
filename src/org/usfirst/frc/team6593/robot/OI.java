@@ -40,6 +40,7 @@ public class OI {
 	Joystick stick = new Joystick(RobotMap.JS_Port);
 	
 	Button startRopeButton = new JoystickButton(stick, RobotMap.X_Button);
+	Button startBallButton = new JoystickButton(stick, RobotMap.Left_Bumper); 
 //	public Button whenPressed() {
 //		// TODO Auto-generated method stub
 //		return null;

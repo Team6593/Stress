@@ -17,13 +17,18 @@ public class RobotMap {
 	// public static int rangefinderPort = 1;
 	// public static int rangefinderModule = 1;
 	
+	public static final int Solenoidport = 0;
+
 	public static int	rightMotor = 0, 
 					    leftMotor = 1,
 					    ropeMotor = 2,
 						shootMotor = 3;
+						
 	
 	public static int JS_Port = 0,
-					  X_Button = 2;
+					  X_Button = 2,
+					  Left_Bumper = 4;
 
+	
 	
 }

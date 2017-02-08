@@ -29,8 +29,15 @@ public class DriveTrain extends Subsystem {
 	}
 	
 	public void drive(double leftSpeed, double rightSpeed){
-		robotdrive.tankDrive(leftSpeed, rightSpeed);
+		robotdrive.tankDrive(-leftSpeed, -rightSpeed);
 	}
+//	public void arcadeDrive(double throttleValue, double turnValue) {
+//        double leftMtr;
+//        double rightMtr;
+//        leftMtr = throttleValue + turnValue;
+//        rightMtr = throttleValue - turnValue;
+//        robotdrive.tankDrive(leftMtr, rightMtr);
+//    }
 	
 	public void stop(){
 		robotdrive.drive(0,0);

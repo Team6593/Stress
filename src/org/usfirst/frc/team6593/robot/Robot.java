@@ -2,6 +2,7 @@
 package org.usfirst.frc.team6593.robot;
 
 import org.usfirst.frc.team6593.robot.commands.Climbing;
+import org.usfirst.frc.team6593.robot.commands.DriveForwardForXAtYCommand;
 import org.usfirst.frc.team6593.robot.commands.Shooting;
 import org.usfirst.frc.team6593.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team6593.robot.subsystems.MotorRope;
@@ -30,6 +31,8 @@ public class Robot extends IterativeRobot {
 	public static final Climbing climbing = new Climbing();
 	public static final ShootOut shootOut = new ShootOut();
 	public static final Shooting shooting = new Shooting();
+	public static final DriveForwardForXAtYCommand driveforwardforXAtYCommand = new DriveForwardForXAtYCommand();
+	
 	
 	public static OI oi;
 
