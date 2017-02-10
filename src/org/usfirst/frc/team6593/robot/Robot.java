@@ -59,6 +59,7 @@ public class Robot extends IterativeRobot {
 		//SmartDashboard.putData("Auto mode", chooser);
 		SmartDashboard.putData("LeftControllerSpeed", (Sendable) drivetrain.leftSC);
 		SmartDashboard.putData("RightControllerSpeed", (Sendable) drivetrain.rightSC);
+		SmartDashboard.putData("Gyro", DriveTrain.gyro.getAngle());
 		
 		CameraServer.getInstance().startAutomaticCapture();
 		

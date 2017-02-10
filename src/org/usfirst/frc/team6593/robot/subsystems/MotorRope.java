@@ -16,8 +16,9 @@ public class MotorRope extends Subsystem {
     // here. Call these from Commands.
 	private static SpeedController ropeClimb;
     
+	
 	public MotorRope(){
-		ropeClimb = new Spark(RobotMap.ropeMotor);
+		MotorRope.ropeClimb = new Spark(RobotMap.ropeMotor);
 	}
 	
 	public static void ropeStart(double speed) {
