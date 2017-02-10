@@ -11,6 +11,7 @@ import org.usfirst.frc.team6593.robot.subsystems.ShootOut;
 
 import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.Sendable;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
@@ -55,7 +56,9 @@ public class Robot extends IterativeRobot {
 		oi = new OI();
 		//chooser.addDefault("Default Auto", new ExampleCommand());
 		// chooser.addObject("My Auto", new MyAutoCommand());
-		SmartDashboard.putData("Auto mode", chooser);
+		//SmartDashboard.putData("Auto mode", chooser);
+		SmartDashboard.putData("LeftControllerSpeed", (Sendable) drivetrain.leftSC);
+		SmartDashboard.putData("RightControllerSpeed", (Sendable) drivetrain.rightSC);
 		
 		CameraServer.getInstance().startAutomaticCapture();
 		
@@ -133,6 +136,7 @@ public class Robot extends IterativeRobot {
 		}*/
 		
 		oi.startRopeButton.whenPressed(climbing);
+		oi.startBallButton.whenPressed(shooting);
 	}
 
 	

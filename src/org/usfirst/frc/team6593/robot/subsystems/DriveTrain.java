@@ -2,6 +2,7 @@ package org.usfirst.frc.team6593.robot.subsystems;
 
 import org.usfirst.frc.team6593.robot.RobotMap;
 import org.usfirst.frc.team6593.robot.commands.TankDrive;
+import edu.wpi.first.wpilibj.ADXRS450_Gyro;
 
 import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.Spark;
@@ -19,11 +20,15 @@ public class DriveTrain extends Subsystem {
 	public SpeedController rightSC, leftSC;
 	private RobotDrive robotdrive;
 	
+	public static ADXRS450_Gyro gyro= new ADXRS450_Gyro();
+	
+	
+	
 	public DriveTrain(){
 		super();
 		
-		leftSC = new Spark(RobotMap.leftMotor);
-		rightSC = new Spark(RobotMap.rightMotor);
+		this.leftSC = new Spark(RobotMap.leftMotor);
+		this.rightSC = new Spark(RobotMap.rightMotor);
 		
 		robotdrive = new RobotDrive(rightSC, leftSC);
 	}
