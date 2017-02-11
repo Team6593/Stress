@@ -2,7 +2,6 @@
 package org.usfirst.frc.team6593.robot;
 
 import org.usfirst.frc.team6593.robot.commands.Climbing;
-import org.usfirst.frc.team6593.robot.commands.DriveForwardForXAtYCommand;
 import org.usfirst.frc.team6593.robot.commands.Shooting;
 import org.usfirst.frc.team6593.robot.commands.Auto.Autoforward;
 import org.usfirst.frc.team6593.robot.subsystems.DriveTrain;
@@ -59,7 +58,8 @@ public class Robot extends IterativeRobot {
 		//SmartDashboard.putData("Auto mode", chooser);
 		SmartDashboard.putData("LeftControllerSpeed", (Sendable) drivetrain.leftSC);
 		SmartDashboard.putData("RightControllerSpeed", (Sendable) drivetrain.rightSC);
-		SmartDashboard.putData("Gyro", DriveTrain.gyro.getAngle());
+		SmartDashboard.putNumber("Gyro", DriveTrain.gyro.getAngle());
+		SmartDashboard.putNumber("UltraSonic", DriveTrain.rangeFinder.getRangeInches());
 		
 		CameraServer.getInstance().startAutomaticCapture();
 		
